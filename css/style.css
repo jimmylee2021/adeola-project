@@ -66,10 +66,11 @@ main {
     justify-content: center;
     align-items: center;
 }
-
-section {
-    margin-top: 20px;
+.greetings {
+    font-size: 30px;
+    margin-left: 15px;
 }
+
 
 .row {
      display: flex;
