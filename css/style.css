@@ -16,7 +16,6 @@ header {
     padding: 20px;
     display: flex;
     position: relative;
-    justify-content: space-between;
     align-items: center;
     z-index: 1;
 }
@@ -24,6 +23,17 @@ header.sticky {
     position: fixed;
     top: 0;right: 0;left: 0;
     box-shadow: .0.5rem 1rem rgba(0,0,0,.1);
+}
+.logo {
+    display: flex;
+    margin-left: 20px;
+}
+.logo a {
+    font-size: 30px;
+    margin-left: 10px;
+    line-height: 50px;
+    color: #fff;
+    text-decoration: none;
 }
 
 .header-div {
@@ -99,13 +109,14 @@ main {
 }
 .btn {
      display: inline-block;
-     padding: 15px 24px;
+     padding: 10px 24px;
      width: 200px;
      margin: 5px;
      font-size: 10px;
      outline: none;
      font-weight: 600;
      border: none;
+     text-decoration: none;
      background: blue;
      color: #fff;
 }
@@ -120,7 +131,52 @@ main {
 }
 
 
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    text-align: center;
+    width: 100%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
-@media only screen and (min-width: 991px) {
-
-}
+  footer {
+    margin-top: 50px;
+    width: 100%;
+    background: blue;
+    padding: 15px;
+    text-align: center;
+  }
+  footer a {
+     color: #fff;
+     text-decoration: none;
+  }

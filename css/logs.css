@@ -1,0 +1,54 @@
+.logs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.log-heading {
+    text-align: center;
+}
+
+.log-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    box-shadow: .0.5rem 1rem rgba(0,0,0,.1);
+    text-align: center;
+    width: 600px;
+    padding: 15px;
+    margin: 20px;
+}
+.log-div h1 {
+    font-size: 15px;
+}
+.input-bx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-bx input {
+    padding: 15px;
+    width: 600px;
+    box-shadow: .0.5rem 1rem rgba(0,0,0,.1);
+    border: 1px solid white;
+    outline: none;
+}
+.input-bx i {
+     padding: 15px;
+     margin-left: -40px;
+     background: blue;
+     color: #fff;
+}
+
+
+@media only screen and (max-width: 500px) {
+   .log-div {
+     width: 300px;
+     flex-direction: column;
+   }
+   .input-bx input {
+    width: 300px;
+   }
+
+}

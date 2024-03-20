@@ -1,0 +1,60 @@
+select {
+    padding: 15px;
+    outline: none;
+    margin-top: 20px;
+    width: 600px;
+    box-shadow: .0.5rem 1rem rgba(0,0,0,.1);
+    border: 1px solid #ffff;
+}
+.input-bx {
+    margin-top: 30px;
+}
+.gift-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cards-bx {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.cards {
+    display: flex;
+    align-items: center;
+    width: 600px;
+    padding: 20px;
+    margin: 10px;
+    border: 1px dotted #333;
+}
+.img-div img{
+    width: 200px;
+}
+.txt-div {
+    margin-left: 20px;
+}
+.txt-div a {
+    color: black;
+}
+
+@media only screen and (max-width: 500px) {
+    .cards {
+        width: 300px;
+    }
+    select {
+        width: 300px;
+    }
+
+    .img-div img {
+        width: 100px;
+    }
+    .txt-div  h3{
+        font-size: 12px;
+        line-height: 20px;
+        color: black;
+        text-decoration: none;
+    }
+}
