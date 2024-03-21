@@ -1,7 +1,9 @@
 .input-group {
     display: flex;
     flex-direction: column;
-    width: 400px;
+}
+section{
+    min-height: 100vh;
 }
 .input-group input {
     margin-top: 20px;
@@ -10,10 +12,12 @@
    border: 1px solid #fff;
     box-shadow: .0.5rem 1rem rgba(0,0,0,.1);
 }
-
-.card-bx {
-    margin-top: 30px;
-    margin-left: 200px;
+.card-header {
+    display: flex;
+    margin: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
 }
 .go-btn {
     margin-top: 20px;
@@ -23,22 +27,22 @@
     text-decoration: none;
 }
 .order-btn {
-     padding: 10px 24px;
+     padding: 10px;
+     border-radius: 10px;
+     width: 100%;
      margin-top: 20px;
      display: inline-block;
-     width: 400px;
      text-align: center;
      color: #fff;
-     background: blue;
+     background:  #1F9AF1;
+}
+
+footer {
+    position: relative;
+}
+section {
+    min-height: 100vh;
 }
 @media only screen and (max-width: 500px) {
-    .card-bx {
-        margin-left: 30px;
-        padding: 20px;
-        overflow-x: hidden;
-        height: 100vh;
-    }
-    .order-btn , .input-group input {
-        width: 300px;
-    }
+    
 }

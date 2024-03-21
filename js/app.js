@@ -17,6 +17,21 @@ menu.addEventListener('click', ()=>{
    }
 })
 
+// code for chatbot pop up 
+let chatPos =  document.getElementById("chat-position");
+let chatCon = document.getElementById("chat-container")
+let icon =  document.getElementById("icon");
+
+icon.addEventListener('click', ()=> {
+  chatCon.classList.toggle('active')
+})
+
+window.addEventListener('click', (event)=>{
+  if (event.target == chatCon) {
+    chatCon.classList.remove('active')
+    chatCon.classList.add('icon')
+  }
+})
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -48,3 +63,45 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+// code for bot
+
+document.addEventListener("DOMContentLoaded", function() {
+  const chatLog = document.getElementById("chat-log");
+  const userInput = document.getElementById("user-input");
+  const sendBtn = document.getElementById("send-btn");
+
+  function autoRespond(message) {
+    const responses = {
+      "hi": "Hello! How can I assist you today?",
+      "help": "Sure, how can I help you?",
+      "bye": "Goodbye! Have a great day!"
+    };
+
+    const response = responses[message.toLowerCase()] || "I'm sorry, I didn't understand that.";
+    displayMessage("Bot", response, "bot-message");
+  }
+
+  function displayMessage(sender, message, className) {
+    const messageElement = document.createElement("div");
+    messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
+    messageElement.classList.add("message", className);
+    chatLog.appendChild(messageElement);
+    chatLog.scrollTop = chatLog.scrollHeight; // Scroll to bottom
+  }
+
+  sendBtn.addEventListener("click", function() {
+    const userInputValue = userInput.value.trim();
+    if (userInputValue !== "") {
+      displayMessage("You", userInputValue, "user-message");
+      autoRespond(userInputValue);
+      userInput.value = "";
+    }
+  });
+
+  userInput.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      sendBtn.click();
+    }
+  });
+});
